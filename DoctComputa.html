@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médico Virtual - Tu PC Funcionando Como Nuevo</title>
+    <title data-key="title">Médico Virtual - Tu PC Funcionando Como Nuevo</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
@@ -74,44 +74,50 @@
 </head>
 <body class="bg-background-light font-display text-text-body">
 
-    <!-- Navigation -->
     <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="#inicio" class="flex items-center text-2xl font-bold text-primary">
-                        <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>Médico Virtual
+                        <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>
+                        <span data-key="navLogo">Médico Virtual</span>
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#beneficios" class="text-text-body hover:text-primary transition">Beneficios</a>
-                    <a href="#como-funciona" class="text-text-body hover:text-primary transition">Cómo Funciona</a>
-                    <a href="#resultados" class="text-text-body hover:text-primary transition">Resultados</a>
+                    <a href="#beneficios" class="text-text-body hover:text-primary transition" data-key="navBeneficios">Beneficios</a>
+                    <a href="#como-funciona" class="text-text-body hover:text-primary transition" data-key="navComoFunciona">Cómo Funciona</a>
+                    <a href="#resultados" class="text-text-body hover:text-primary transition" data-key="navResultados">Resultados</a>
                 </div>
-                <button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition transform hover:scale-105">
-                    Descargar Gratis
-                </button>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <button id="lang-en" class="text-sm font-bold text-primary transition-opacity duration-200">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button id="lang-es" class="text-sm font-bold text-text-body transition-opacity duration-200 opacity-60">ES</button>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition transform hover:scale-105" data-key="navDescargar">
+                        Descargar Gratis
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="bg-white pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <h1 class="text-5xl md:text-6xl font-extrabold text-text-headings mb-6 leading-tight">
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-text-headings mb-6 leading-tight" data-key="heroTitle">
                         Tu PC Funcionando<br>
                         <span class="text-primary">Como Nuevo</span>
                     </h1>
-                    <p class="text-xl md:text-2xl mb-8 text-text-body">
+                    <p class="text-xl md:text-2xl mb-8 text-text-body" data-key="heroSubtitle">
                         Resuelve cualquier problema de tu computadora en minutos, sin ser experto en tecnología
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition transform hover:scale-105 pulse-glow flex items-center justify-center">
+                        <button class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition transform hover:scale-105 pulse-glow flex items-center justify-center" data-key="heroBtnDownload">
                             <span class="material-symbols-outlined align-middle mr-2">download</span>Descargar Ahora
                         </button>
-                        <button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary hover:text-white transition">
+                        <button class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary hover:text-white transition" data-key="heroBtnDemo">
                             Ver Demo
                         </button>
                     </div>
@@ -126,14 +132,14 @@
                                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                <span class="text-white font-semibold">Diagnóstico en Progreso...</span>
+                                <span class="text-white font-semibold" data-key="diagTitle">Diagnóstico en Progreso...</span>
                             </div>
                             <div class="p-6">
                                 <div class="flex items-center gap-4 mb-4">
                                     <span class="material-symbols-outlined !text-5xl text-primary">manage_search</span>
                                     <div>
-                                        <p class="font-semibold text-text-headings">Analizando tu PC</p>
-                                        <p class="text-sm text-text-body">Detectando problemas...</p>
+                                        <p class="font-semibold text-text-headings" data-key="diagAnalyzing">Analizando tu PC</p>
+                                        <p class="text-sm text-text-body" data-key="diagDetecting">Detectando problemas...</p>
                                     </div>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
@@ -142,19 +148,19 @@
                                 <div class="grid grid-cols-2 gap-3 text-sm">
                                     <div class="flex items-center gap-2">
                                         <span class="material-symbols-outlined text-green-500">check_circle</span>
-                                        <span class="text-text-body">RAM verificada</span>
+                                        <span class="text-text-body" data-key="diagRam">RAM verificada</span>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="material-symbols-outlined text-green-500">check_circle</span>
-                                        <span class="text-text-body">Disco revisado</span>
+                                        <span class="text-text-body" data-key="diagDisk">Disco revisado</span>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="material-symbols-outlined text-yellow-500">autorenew</span>
-                                        <span class="text-text-body">Red en análisis</span>
+                                        <span class="text-text-body" data-key="diagNetwork">Red en análisis</span>
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <span class="material-symbols-outlined text-blue-500">sync</span>
-                                        <span class="text-text-body">Sistema operativo</span>
+                                        <span class="text-text-body" data-key="diagOs">Sistema operativo</span>
                                     </div>
                                 </div>
                             </div>
@@ -165,14 +171,13 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
     <section id="beneficios" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="stepsTitle">
                     Arregla Tu PC en <span class="text-primary">3 Pasos Simples</span>
                 </h2>
-                <p class="text-xl text-text-body max-w-2xl mx-auto">
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="stepsSubtitle">
                     No necesitas ser técnico. Solo responde preguntas simples y obtén soluciones instantáneas
                 </p>
             </div>
@@ -180,24 +185,24 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center p-8 rounded-xl bg-white card-hover fade-in">
                     <span class="material-symbols-outlined !text-6xl mb-4 text-primary">my_location</span>
-                    <h3 class="text-2xl font-bold text-text-headings mb-4">Describe el Problema</h3>
-                    <p class="text-text-body text-lg">
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step1Title">Describe el Problema</h3>
+                    <p class="text-text-body text-lg" data-key="step1Desc">
                         Elige entre 10 situaciones comunes. ¿Tu PC no enciende? ¿Va lenta? Tenemos la solución
                     </p>
                 </div>
 
                 <div class="text-center p-8 rounded-xl bg-white card-hover fade-in" style="transition-delay: 0.1s;">
                     <span class="material-symbols-outlined !text-6xl mb-4 text-primary">question_answer</span>
-                    <h3 class="text-2xl font-bold text-text-headings mb-4">Responde Preguntas</h3>
-                    <p class="text-text-body text-lg">
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step2Title">Responde Preguntas</h3>
+                    <p class="text-text-body text-lg" data-key="step2Desc">
                         Preguntas simples en lenguaje cotidiano. Sin tecnicismos, sin complicaciones
                     </p>
                 </div>
 
                 <div class="text-center p-8 rounded-xl bg-white card-hover fade-in" style="transition-delay: 0.2s;">
                     <span class="material-symbols-outlined !text-6xl mb-4 text-primary">auto_awesome</span>
-                    <h3 class="text-2xl font-bold text-text-headings mb-4">Recibe Tu Plan</h3>
-                    <p class="text-text-body text-lg">
+                    <h3 class="text-2xl font-bold text-text-headings mb-4" data-key="step3Title">Recibe Tu Plan</h3>
+                    <p class="text-text-body text-lg" data-key="step3Desc">
                         Lista paso a paso con instrucciones claras y videos explicativos para solucionar todo
                     </p>
                 </div>
@@ -205,14 +210,13 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
     <section id="como-funciona" class="py-20 bg-background-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="featuresTitle">
                     Todo lo que Puedes <span class="text-primary">Resolver</span>
                 </h2>
-                <p class="text-xl text-text-body max-w-2xl mx-auto">
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="featuresSubtitle">
                     Los problemas más comunes de PC, todos en una app
                 </p>
             </div>
@@ -220,56 +224,55 @@
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">power_off</span>
-                    <p class="font-semibold text-text-headings">No enciende</p>
+                    <p class="font-semibold text-text-headings" data-key="feature1">No enciende</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">hourglass_empty</span>
-                    <p class="font-semibold text-text-headings">Va muy lenta</p>
+                    <p class="font-semibold text-text-headings" data-key="feature2">Va muy lenta</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">desktop_windows</span>
-                    <p class="font-semibold text-text-headings">Pantalla azul</p>
+                    <p class="font-semibold text-text-headings" data-key="feature3">Pantalla azul</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">wifi_off</span>
-                    <p class="font-semibold text-text-headings">Sin internet</p>
+                    <p class="font-semibold text-text-headings" data-key="feature4">Sin internet</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">local_fire_department</span>
-                    <p class="font-semibold text-text-headings">Sobrecalentamiento</p>
+                    <p class="font-semibold text-text-headings" data-key="feature5">Sobrecalentamiento</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">ac_unit</span>
-                    <p class="font-semibold text-text-headings">Se congela</p>
+                    <p class="font-semibold text-text-headings" data-key="feature6">Se congela</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">graphic_eq</span>
-                    <p class="font-semibold text-text-headings">Ruidos extraños</p>
+                    <p class="font-semibold text-text-headings" data-key="feature7">Ruidos extraños</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">app_blocking</span>
-                    <p class="font-semibold text-text-headings">Apps no abren</p>
+                    <p class="font-semibold text-text-headings" data-key="feature8">Apps no abren</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">desktop_access_disabled</span>
-                    <p class="font-semibold text-text-headings">Pantalla negra</p>
+                    <p class="font-semibold text-text-headings" data-key="feature9">Pantalla negra</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover fade-in">
                     <span class="material-symbols-outlined !text-5xl mb-3 text-primary">power_settings_new</span>
-                    <p class="font-semibold text-text-headings">Apagados aleatorios</p>
+                    <p class="font-semibold text-text-headings" data-key="feature10">Apagados aleatorios</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Section with Chart -->
     <section id="resultados" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-4" data-key="resultsTitle">
                     Resultados que <span class="text-primary">Puedes Ver</span>
                 </h2>
-                <p class="text-xl text-text-body max-w-2xl mx-auto">
+                <p class="text-xl text-text-body max-w-2xl mx-auto" data-key="resultsSubtitle">
                     No solo son números, es tu progreso hacia una PC más rápida y estable
                 </p>
             </div>
@@ -277,13 +280,14 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
                     <div class="bg-background-light p-8 rounded-xl">
-                        <h3 class="text-2xl font-bold text-text-headings mb-6 text-center">Problemas Resueltos por Gravedad</h3>
+                        <h3 class="text-2xl font-bold text-text-headings mb-6 text-center" data-key="chartTitle">Problemas Resueltos por Gravedad</h3>
                         <div class="chart-wrapper">
                             <canvas id="resultsChart"></canvas>
                         </div>
                         <div class="mt-6 bg-white p-4 rounded-xl">
                             <p class="text-sm text-text-body text-center flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary mr-2">lightbulb</span> <strong class="text-text-headings mr-1">Esto significa:</strong> La mayoría de los problemas se pueden resolver sin ayuda técnica profesional.
+                                <span class="material-symbols-outlined text-primary mr-2">lightbulb</span> 
+                                <span data-key="chartTooltip"><strong class="text-text-headings mr-1">Esto significa:</strong> La mayoría de los problemas se pueden resolver sin ayuda técnica profesional.</span>
                             </p>
                         </div>
                     </div>
@@ -294,9 +298,9 @@
                         <div class="flex items-center gap-4">
                             <span class="material-symbols-outlined !text-4xl text-red-500">error</span>
                             <div>
-                                <h4 class="font-bold text-text-headings mb-2">Problemas Graves</h4>
-                                <p class="text-text-body">PC no enciende o no da video. Requieren atención inmediata</p>
-                                <p class="text-sm text-red-600 font-semibold mt-2">1 de cada 5 casos</p>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsSevereTitle">Problemas Graves</h4>
+                                <p class="text-text-body" data-key="resultsSevereDesc">PC no enciende o no da video. Requieren atención inmediata</p>
+                                <p class="text-sm text-red-600 font-semibold mt-2" data-key="resultsSevereCases">1 de cada 5 casos</p>
                             </div>
                         </div>
                     </div>
@@ -305,9 +309,9 @@
                         <div class="flex items-center gap-4">
                             <span class="material-symbols-outlined !text-4xl text-yellow-500">warning</span>
                             <div>
-                                <h4 class="font-bold text-text-headings mb-2">Problemas Medios</h4>
-                                <p class="text-text-body">Lentitud, pantallas azules, congelamientos. Solución en minutos</p>
-                                <p class="text-sm text-yellow-600 font-semibold mt-2">3 de cada 5 casos</p>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsMediumTitle">Problemas Medios</h4>
+                                <p class="text-text-body" data-key="resultsMediumDesc">Lentitud, pantallas azules, congelamientos. Solución en minutos</p>
+                                <p class="text-sm text-yellow-600 font-semibold mt-2" data-key="resultsMediumCases">3 de cada 5 casos</p>
                             </div>
                         </div>
                     </div>
@@ -316,9 +320,9 @@
                         <div class="flex items-center gap-4">
                             <span class="material-symbols-outlined !text-4xl text-green-500">check_circle</span>
                             <div>
-                                <h4 class="font-bold text-text-headings mb-2">Problemas Leves</h4>
-                                <p class="text-text-body">Configuraciones simples que arreglas tú mismo en segundos</p>
-                                <p class="text-sm text-green-600 font-semibold mt-2">1 de cada 5 casos</p>
+                                <h4 class="font-bold text-text-headings mb-2" data-key="resultsLightTitle">Problemas Leves</h4>
+                                <p class="text-text-body" data-key="resultsLightDesc">Configuraciones simples que arreglas tú mismo en segundos</p>
+                                <p class="text-sm text-green-600 font-semibold mt-2" data-key="resultsLightCases">1 de cada 5 casos</p>
                             </div>
                         </div>
                     </div>
@@ -327,20 +331,19 @@
         </div>
     </section>
 
-   
-    <!-- Final CTA -->
+    
     <section class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="fade-in">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-headings mb-6" data-key="ctaTitle">
                     ¿Listo para Arreglar Tu PC?
                 </h2>
-                <p class="text-xl text-text-body mb-8 max-w-2xl mx-auto">
+                <p class="text-xl text-text-body mb-8 max-w-2xl mx-auto" data-key="ctaSubtitle">
                     Descarga Médico Virtual gratis y resuelve cualquier problema en minutos. Sin complicaciones, sin costos ocultos
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                    <button class="bg-primary text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition transform hover:scale-105 pulse-glow flex items-center justify-center">
+                    <button class="bg-primary text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl transition transform hover:scale-105 pulse-glow flex items-center justify-center" data-key="ctaButton">
                         <span class="material-symbols-outlined align-middle mr-2">smartphone</span> Descargar para Android
                     </button>
                 </div>
@@ -348,96 +351,258 @@
                 <div class="flex items-center justify-center gap-8 text-sm text-text-body">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-green-500">check</span>
-                        <span>100% Gratis</span>
+                        <span data-key="ctaTag1">100% Gratis</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-green-500">check</span>
-                        <span>Sin Anuncios</span>
+                        <span data-key="ctaTag2">Sin Anuncios</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-green-500">check</span>
-                        <span>Funciona Sin Internet</span>
+                        <span data-key="ctaTag3">Funciona Sin Internet</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-background-dark text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex items-center justify-center text-2xl font-bold text-primary mb-4">
-                <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>Médico Virtual
+                <span class="material-symbols-outlined align-middle mr-2">laptop_mac</span>
+                <span data-key="footerLogo">Médico Virtual</span>
             </div>
-            <p class="mb-4">Tu PC funcionando como nuevo, siempre</p>
-            <p class="text-sm">&copy; 2025 Médico Virtual. Todos los derechos reservados.</p>
+            <p class="mb-4" data-key="footerSubtitle">Tu PC funcionando como nuevo, siempre</p>
+            <p class="text-sm" data-key="footerRights">&copy; 2025 Médico Virtual. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Intersection Observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Chart
-        const ctx = document.getElementById('resultsChart');
-        if (ctx) {
-            new Chart(ctx.getContext('2d'), {
-                type: 'doughnut',
-                data: {
-                    labels: ['Problemas Graves', 'Problemas Medios', 'Problemas Leves'],
-                    datasets: [{
-                        data: [1, 3, 1],
-                        backgroundColor: [
-                            '#dc3545', // Danger
-                            '#ffc107', // Warning
-                            '#28a745'  // Success
-                        ],
-                        borderColor: [
-                            '#fff',
-                            '#fff',
-                            '#fff'
-                        ],
-                        borderWidth: 2
-                    }]
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Translation Logic ---
+            const translations = {
+                'en': {
+                    'title': 'Virtual Medic - Your PC Running Like New',
+                    'navLogo': 'Virtual Medic',
+                    'navBeneficios': 'Benefits',
+                    'navComoFunciona': 'How It Works',
+                    'navResultados': 'Results',
+                    'navDescargar': 'Download Free',
+                    'heroTitle': 'Your PC Running<br><span class="text-primary">Like New</span>',
+                    'heroSubtitle': 'Solve any computer problem in minutes, without being a tech expert.',
+                    'heroBtnDownload': '<span class="material-symbols-outlined align-middle mr-2">download</span>Download Now',
+                    'heroBtnDemo': 'Watch Demo',
+                    'diagTitle': 'Diagnosis in Progress...',
+                    'diagAnalyzing': 'Analyzing your PC',
+                    'diagDetecting': 'Detecting problems...',
+                    'diagRam': 'RAM checked',
+                    'diagDisk': 'Disk checked',
+                    'diagNetwork': 'Analyzing network',
+                    'diagOs': 'Operating system',
+                    'stepsTitle': 'Fix Your PC in <span class="text-primary">3 Simple Steps</span>',
+                    'stepsSubtitle': 'No tech skills needed. Just answer simple questions and get instant solutions.',
+                    'step1Title': 'Describe the Problem',
+                    'step1Desc': "Choose from 10 common issues. PC won't turn on? Running slow? We have the fix.",
+                    'step2Title': 'Answer Questions',
+                    'step2Desc': 'Simple questions in plain language. No jargon, no complications.',
+                    'step3Title': 'Get Your Plan',
+                    'step3Desc': 'A step-by-step list with clear instructions and video guides to fix everything.',
+                    'featuresTitle': 'Everything You Can <span class="text-primary">Solve</span>',
+                    'featuresSubtitle': 'The most common PC problems, all in one app',
+                    'feature1': "Won't turn on",
+                    'feature2': 'Runs very slow',
+                    'feature3': 'Blue screen',
+                    'feature4': 'No internet',
+                    'feature5': 'Overheating',
+                    'feature6': 'Freezing',
+                    'feature7': 'Strange noises',
+                    'feature8': "Apps won't open",
+                    'feature9': 'Black screen',
+                    'feature10': 'Random shutdowns',
+                    'resultsTitle': 'Results You <span class="text-primary">Can See</span>',
+                    'resultsSubtitle': "It's not just numbers; it's your progress towards a faster, more stable PC.",
+                    'chartTitle': 'Problems Solved by Severity',
+                    'chartLabels': ['Severe', 'Medium', 'Minor'],
+                    'chartTooltip': '<strong class="text-text-headings mr-1">This means:</strong> Most problems can be solved without professional technical help.',
+                    'resultsSevereTitle': 'Severe Problems',
+                    'resultsSevereDesc': "PC won't boot or display video. Requires immediate attention.",
+                    'resultsSevereCases': '1 out of 5 cases',
+                    'resultsMediumTitle': 'Medium Problems',
+                    'resultsMediumDesc': 'Slowness, blue screens, freezing. Solved in minutes.',
+                    'resultsMediumCases': '3 out of 5 cases',
+                    'resultsLightTitle': 'Minor Problems',
+                    'resultsLightDesc': 'Simple settings you can fix yourself in seconds.',
+                    'resultsLightCases': '1 out of 5 cases',
+                    'ctaTitle': 'Ready to Fix Your PC?',
+                    'ctaSubtitle': 'Download Virtual Medic for free and solve any problem in minutes. No hassle, no hidden costs.',
+                    'ctaButton': '<span class="material-symbols-outlined align-middle mr-2">smartphone</span> Download for Android',
+                    'ctaTag1': '100% Free',
+                    'ctaTag2': 'No Ads',
+                    'ctaTag3': 'Works Offline',
+                    'footerLogo': 'Virtual Medic',
+                    'footerSubtitle': 'Your PC running like new, always',
+                    'footerRights': '&copy; 2025 Virtual Medic. All rights reserved.',
                 },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                padding: 15,
-                                font: { 
-                                    size: 13,
-                                    family: 'Manrope'
+                'es': {
+                    'title': 'Médico Virtual - Tu PC Funcionando Como Nuevo',
+                    'navLogo': 'Médico Virtual',
+                    'navBeneficios': 'Beneficios',
+                    'navComoFunciona': 'Cómo Funciona',
+                    'navResultados': 'Resultados',
+                    'navDescargar': 'Descargar Gratis',
+                    'heroTitle': 'Tu PC Funcionando<br><span class="text-primary">Como Nuevo</span>',
+                    'heroSubtitle': 'Resuelve cualquier problema de tu computadora en minutos, sin ser experto en tecnología',
+                    'heroBtnDownload': '<span class="material-symbols-outlined align-middle mr-2">download</span>Descargar Ahora',
+                    'heroBtnDemo': 'Ver Demo',
+                    'diagTitle': 'Diagnóstico en Progreso...',
+                    'diagAnalyzing': 'Analizando tu PC',
+                    'diagDetecting': 'Detectando problemas...',
+                    'diagRam': 'RAM verificada',
+                    'diagDisk': 'Disco revisado',
+                    'diagNetwork': 'Red en análisis',
+                    'diagOs': 'Sistema operativo',
+                    'stepsTitle': 'Arregla Tu PC en <span class="text-primary">3 Pasos Simples</span>',
+                    'stepsSubtitle': 'No necesitas ser técnico. Solo responde preguntas simples y obtén soluciones instantáneas',
+                    'step1Title': 'Describe el Problema',
+                    'step1Desc': 'Elige entre 10 situaciones comunes. ¿Tu PC no enciende? ¿Va lenta? Tenemos la solución',
+                    'step2Title': 'Responde Preguntas',
+                    'step2Desc': 'Preguntas simples en lenguaje cotidiano. Sin tecnicismos, sin complicaciones',
+                    'step3Title': 'Recibe Tu Plan',
+                    'step3Desc': 'Lista paso a paso con instrucciones claras y videos explicativos para solucionar todo',
+                    'featuresTitle': 'Todo lo que Puedes <span class="text-primary">Resolver</span>',
+                    'featuresSubtitle': 'Los problemas más comunes de PC, todos en una app',
+                    'feature1': 'No enciende',
+                    'feature2': 'Va muy lenta',
+                    'feature3': 'Pantalla azul',
+                    'feature4': 'Sin internet',
+                    'feature5': 'Sobrecalentamiento',
+                    'feature6': 'Se congela',
+                    'feature7': 'Ruidos extraños',
+                    'feature8': 'Apps no abren',
+                    'feature9': 'Pantalla negra',
+                    'feature10': 'Apagados aleatorios',
+                    'resultsTitle': 'Resultados que <span class="text-primary">Puedes Ver</span>',
+                    'resultsSubtitle': 'No solo son números, es tu progreso hacia una PC más rápida y estable',
+                    'chartTitle': 'Problemas Resueltos por Gravedad',
+                    'chartLabels': ['Problemas Graves', 'Problemas Medios', 'Problemas Leves'],
+                    'chartTooltip': '<strong class="text-text-headings mr-1">Esto significa:</strong> La mayoría de los problemas se pueden resolver sin ayuda técnica profesional.',
+                    'resultsSevereTitle': 'Problemas Graves',
+                    'resultsSevereDesc': 'PC no enciende o no da video. Requieren atención inmediata',
+                    'resultsSevereCases': '1 de cada 5 casos',
+                    'resultsMediumTitle': 'Problemas Medios',
+                    'resultsMediumDesc': 'Lentitud, pantallas azules, congelamientos. Solución en minutos',
+                    'resultsMediumCases': '3 de cada 5 casos',
+                    'resultsLightTitle': 'Problemas Leves',
+                    'resultsLightDesc': 'Configuraciones simples que arreglas tú mismo en segundos',
+                    'resultsLightCases': '1 de cada 5 casos',
+                    'ctaTitle': '¿Listo para Arreglar Tu PC?',
+                    'ctaSubtitle': 'Descarga Médico Virtual gratis y resuelve cualquier problema en minutos. Sin complicaciones, sin costos ocultos',
+                    'ctaButton': '<span class="material-symbols-outlined align-middle mr-2">smartphone</span> Descargar para Android',
+                    'ctaTag1': '100% Gratis',
+                    'ctaTag2': 'Sin Anuncios',
+                    'ctaTag3': 'Funciona Sin Internet',
+                    'footerLogo': 'Médico Virtual',
+                    'footerSubtitle': 'Tu PC funcionando como nuevo, siempre',
+                    'footerRights': '&copy; 2025 Médico Virtual. Todos los derechos reservados.',
+                }
+            };
+
+            const btnEN = document.getElementById('lang-en');
+            const btnES = document.getElementById('lang-es');
+            let resultsChart;
+
+            function setLanguage(lang) {
+                localStorage.setItem('language', lang);
+                document.documentElement.lang = lang;
+
+                if (lang === 'en') {
+                    btnEN.classList.remove('opacity-60', 'text-text-body');
+                    btnEN.classList.add('opacity-100', 'text-primary');
+                    btnES.classList.remove('opacity-100', 'text-primary');
+                    btnES.classList.add('opacity-60', 'text-text-body');
+                } else {
+                    btnES.classList.remove('opacity-60', 'text-text-body');
+                    btnES.classList.add('opacity-100', 'text-primary');
+                    btnEN.classList.remove('opacity-100', 'text-primary');
+                    btnEN.classList.add('opacity-60', 'text-text-body');
+                }
+
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+
+                if (resultsChart && translations[lang]['chartLabels']) {
+                    resultsChart.data.labels = translations[lang]['chartLabels'];
+                    resultsChart.update();
+                }
+            }
+
+            btnEN.addEventListener('click', () => setLanguage('en'));
+            btnES.addEventListener('click', () => setLanguage('es'));
+
+            // --- Intersection Observer for fade-in animations ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Chart ---
+            const ctx = document.getElementById('resultsChart');
+            if (ctx) {
+                resultsChart = new Chart(ctx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: [], 
+                        datasets: [{
+                            data: [1, 3, 1],
+                            backgroundColor: ['#dc3545', '#ffc107', '#28a745'],
+                            borderColor: ['#fff', '#fff', '#fff'],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 15,
+                                    font: { 
+                                        size: 13,
+                                        family: 'Manrope'
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-        }
+                });
+            }
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+            // --- Smooth scroll ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
             });
+
+            // --- Set Initial Language ---
+            const savedLang = localStorage.getItem('language') || 'en';
+            setLanguage(savedLang);
         });
     </script>
 </body>
