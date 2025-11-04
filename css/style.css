@@ -9937,6 +9937,11 @@ h6,
   transition: .5s;
 }
 
+.portafolio-btn a {
+  margin-right: 34px;
+
+}
+
 .portfolio-item:hover .portfolio-btn {
   opacity: 1;
   width: calc(100% - 60px);
